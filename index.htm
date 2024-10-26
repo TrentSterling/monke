@@ -1,1 +1,117 @@
-<h1>my site goes here</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🐵 MONKEPORTALS 🌀 | Swing, Rocket, and Leap!</title>
+    <meta name="description" content="Defy gravity with MONKE acrobatics and mind-bending portals! Join multiplayer chaos in MONKEPORTALS with endless fun, customization, and epic MONKE-tastic secrets!">
+    <meta name="keywords" content="MONKEPORTALS, monkey game, portals, multiplayer puzzles, MONKE madness, gravity-defying, swing, leap, rocket">
+    <meta name="author" content="Trent Sterling">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Arial', sans-serif; background-color: #1a1c1e; color: #e0e0e0; text-align: center; overflow-x: hidden; }
+        h1 { font-size: 5em; color: #FF6F00; position: relative; animation: bounceText 4s infinite; margin-bottom: 10px; }
+        h1 span { display: inline-block; }
+        .monke-emoji { animation: bounceEmoji 1.5s infinite; }
+        @keyframes bounceText { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        @keyframes bounceEmoji { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
+        .portal-emoji { display: inline-block; animation: bouncePortal 2.5s infinite; font-size: 50px; }
+        @keyframes bouncePortal { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
+        p { font-size: 1.5em; margin-bottom: 15px; padding: 0 5%; }
+        .hero-section { background-color: rgba(16, 18, 18, 0.8); padding: 40px; border-radius: 20px; position: relative; }
+        .btn { background-color: #FF8C32; color: #101112; padding: 15px 30px; font-size: 1.5em; border: none; border-radius: 12px; cursor: pointer; transition: transform 0.2s; }
+        .btn:hover { transform: scale(1.1); background-color: #FF6F00; }
+        .section { margin: 15px 0; padding: 20px; background-color: rgba(31, 32, 34, 0.7); border-radius: 20px; }
+        .section h2 { color: #FF8C32; font-size: 3em; margin-bottom: 10px; }
+        footer { margin-top: 20px; padding: 15px; background-color: #FF6F00; color: #2C2F33; border-radius: 10px; }
+        footer p { font-size: 1.2em; }
+        .cta { font-size: 2.5em; color: #FF8C32; text-shadow: 1px 1px 5px #000; animation: flashCta 2s infinite alternate; margin: 20px 0; }
+        @keyframes flashCta { from { opacity: 1; } to { opacity: 0.5; } }
+        .matrix-rain { position: absolute; top: 0; left: 0; height: 100%; width: 100%; pointer-events: none; z-index: 0; }
+        .matrix-rain .particle { position: absolute; top: -10%; left: 50%; font-size: 50px; animation: fall linear infinite; opacity: 0; }
+        @keyframes fall { 0% { transform: translateY(0); opacity: 1; } 100% { transform: translateY(100vh); opacity: 0; } }
+        h2 { color: #FF8C32; font-size: 2em; }
+        .privacy-section { padding: 15px 5%; background-color: rgba(31, 32, 34, 0.8); border-radius: 20px; margin: 15px 0; }
+        .features-list { list-style: none; padding: 0; margin: 15px 0; }
+        .features-list li { font-size: 1.5em; background-color: rgba(255, 140, 50, 0.2); border-radius: 10px; padding: 10px; transition: transform 0.2s; }
+        .features-list li:hover { transform: scale(1.05); }
+
+        /* Link Styles */
+        a {
+            color: #FF8C32; /* Link color */
+            text-decoration: none; /* Remove underline */
+            transition: color 0.2s; /* Smooth transition */
+        }
+        a:hover {
+            color: #FF6F00; /* Hover color */
+            text-decoration: underline; /* Underline on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="matrix-rain">
+            <div class="particle" style="animation-delay: 0s; left: 10%; animation-duration: 1s;">🌀</div>
+            <div class="particle" style="animation-delay: 0.1s; left: 20%; animation-duration: 1.2s;">🌀</div>
+            <div class="particle" style="animation-delay: 0.2s; left: 30%; animation-duration: 1.5s;">🌀</div>
+            <div class="particle" style="animation-delay: 0.3s; left: 40%; animation-duration: 1s;">🌀</div>
+            <div class="particle" style="animation-delay: 0.4s; left: 50%; animation-duration: 1.3s;">🌀</div>
+            <div class="particle" style="animation-delay: 0.5s; left: 60%; animation-duration: 1.1s;">🌀</div>
+            <div class="particle" style="animation-delay: 0.6s; left: 70%; animation-duration: 1.4s;">🌀</div>
+            <div class="particle" style="animation-delay: 0.7s; left: 80%; animation-duration: 1.2s;">🌀</div>
+            <div class="particle" style="animation-delay: 0.8s; left: 90%; animation-duration: 1.6s;">🌀</div>
+        </div>
+        <header class="hero-section">
+            <h1><span class="monke-emoji">🐵</span> MONKEPORTALS <span class="portal-emoji">🌀</span></h1>
+            <p>Defy gravity with mind-boggling portals and MONKE madness!</p>
+            <div class="cta">Unleash your Inner MONKE!</div>
+            <button class="btn">Join the Adventure!</button>
+        </header>
+        <section class="customization section">
+            <h2>Customize Your MONKE</h2>
+            <p>Choose your skins, abilities, and move sets!</p>
+            <p>Unleash MONKE-tastic cooperative powers!</p>
+            <p>Customize your MONKE with hilarious cosmetics!</p>
+        </section>
+        <section class="multiplayer section">
+            <h2>Multiplayer Madness</h2>
+            <p>Team up or face off in epic challenges!</p>
+            <p>Grab your fellow MONKEs and embark on multiplayer madness!</p>
+            <p>Solve mind-bending puzzles together!</p>
+        </section>
+        <section class="info section">
+            <h2>Game Features</h2>
+            <ul class="features-list">
+                <li>🌍 <strong>Diverse Environments</strong>: Explore vibrant worlds filled with challenges.</li>
+                <li>🤝 <strong>Cooperative Play</strong>: Team up with friends to conquer puzzles.</li>
+                <li>🎮 <strong>Unique Abilities</strong>: Customize your MONKE with unique skills!</li>
+                <li>🏆 <strong>Epic Challenges</strong>: Take on weekly challenges for rewards!</li>
+            </ul>
+        </section>
+        <div class="privacy-section">
+            <h2>MONKEPORTALS Privacy Policy</h2>
+           
+    <p>Thank you for using MONKEPORTALS, developed by Tront. We understand that your privacy is important to you, and we are committed to protecting it. This privacy policy explains what data we collect and how we use it.</p>
+
+    <h2>Data Collection and Use</h2>
+    <p>MONKEPORTALS does not collect any personal data from our game application on any platform. We do not collect any analytics or personal information. We do not use any collected data for marketing purposes.</p>
+
+    <h2>Security</h2>
+    <p>The security of your personal data is of the utmost importance to us. While we make every effort to protect it, we cannot guarantee the absolute security of your data. MONKEPORTALS does not leak any personal data.</p>
+
+    <h2>Cookies</h2>
+    <p>Cookies are text files placed on your computer to collect standard Internet log information and visitor behavior information. You can set your browser not to accept cookies, or you can remove them from your browser by following the instructions at <a href="https://www.allaboutcookies.org" target="_blank">allaboutcookies.org</a>. Please note that some features of our website may not function as a result.</p>
+
+    <h2>Privacy Policies of Other Websites</h2>
+    <p>Our website may contain links to other websites. Please be aware that we are not responsible for the privacy practices of these other websites. We recommend that you read the privacy policies of each website that you visit.</p>
+
+    <h2>Changes to Our Privacy Policy</h2>
+    <p>We review and update our privacy policy regularly. This privacy policy was last updated on [Insert Date]. If you have any questions or concerns about our privacy policy, please don't hesitate to contact us at <a href="mailto:trentsterling@gmail.com">trentsterling@gmail.com</a>. We are always happy to help.</p>
+
+        </div>
+        <footer>
+            <p>&copy; 2024 Tront. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
