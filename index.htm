@@ -7,7 +7,7 @@
     <meta name="description" content="Defy gravity with MONKE acrobatics and mind-bending portals! Join multiplayer chaos in MONKEPORTALS with endless fun, customization, and epic MONKE-tastic secrets!">
     <meta name="keywords" content="MONKEPORTALS, monkey game, portals, multiplayer puzzles, MONKE madness, gravity-defying, swing, leap, rocket">
     <meta name="author" content="Trent Sterling">
-       <style>
+     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Arial', sans-serif; background-color: #1a1c1e; color: #e0e0e0; text-align: center; overflow-x: hidden; }
         h1 { font-size: 5em; color: #FF6F00; position: relative; animation: bounceText 4s infinite; margin-bottom: 10px; }
@@ -35,19 +35,8 @@
         .features-list { list-style: none; padding: 0; margin: 15px 0; }
         .features-list li { font-size: 1.5em; background-color: rgba(255, 140, 50, 0.2); border-radius: 10px; padding: 10px; transition: transform 0.2s; }
         .features-list li:hover { transform: scale(1.05); }
-
-        /* Link Styles */
-        a {
-            color: #FF8C32; 
-            text-decoration: none; 
-            transition: color 0.2s; 
-        }
-        a:hover {
-            color: #FF6F00; 
-            text-decoration: underline; 
-        }
-
-        /* Mobile CSS */
+        a { color: #FF8C32; text-decoration: none; transition: color 0.2s; }
+        a:hover { color: #FF6F00; text-decoration: underline; }
         @media (max-width: 768px) {
             h1 { font-size: 3em; }
             h2 { font-size: 1.8em; }
@@ -56,6 +45,40 @@
             .btn { font-size: 1.2em; padding: 10px 20px; }
             .features-list li { font-size: 1.2em; }
             footer p { font-size: 1em; }
+            .video-container {
+                width: 100%; 
+                margin: 0; 
+                padding: 0; 
+                box-shadow: none; 
+            }
+        }
+        @media (min-width: 769px) {
+            .video-container {
+                width: calc(50% - 40px); 
+            }
+        }
+        @media (min-width: 1200px) {
+            .video-container {
+                width: calc(50% - 60px); 
+            }
+        }
+        @media (min-width: 1600px) {
+            .video-container {
+                width: calc(50% - 60px); 
+            }
+        }
+        .video-container {
+            display: inline-block;
+            margin: 20px;
+            background-color: rgba(255, 140, 50, 0.2);
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+        video {
+            width: 100%; 
+            height: auto; 
+            border-radius: 5px;
         }
     </style>
 </head>
@@ -78,6 +101,20 @@
             <div class="cta">Unleash your Inner MONKE!</div>
             <button class="btn">Join the Adventure!</button>
         </header>
+        
+        <div class="video-container">
+            <video controls>
+                <source src="video1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="video-container">
+            <video controls>
+                <source src="video2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        
         <section class="customization section">
             <h2>Customize Your MONKE</h2>
             <p>Choose your skins, abilities, and move sets!</p>
