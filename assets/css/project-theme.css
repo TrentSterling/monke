@@ -26,6 +26,13 @@ html[data-tront-theme-surface="project"][data-te-project="custom"] :is(a, .featu
 }
 /* Keep off-screen decorative emoji inside their fixed viewport, not the page width. */
 html[data-tront-theme-surface="project"] #particle-container { overflow: hidden; }
+/* Let both title emojis fit on narrow phones without changing the larger layout. */
+@media (max-width: 360px) {
+  html[data-tront-theme-surface="project"] .hero-title {
+    font-size: clamp(3rem, 16vw, 3.5rem);
+    gap: .75rem;
+  }
+}
 /* Paper keeps the glow shapes with softer accent light instead of dark halos. */
 html[data-tront-theme-surface="project"][data-te-project="custom"][data-te-mode="light"] .section-header {
   text-shadow: 0 0 10px color-mix(in srgb, var(--portal-blue) 24%, transparent);
