@@ -24,3 +24,17 @@ html[data-tront-theme-surface="project"][data-te-project="custom"] :is(a, .featu
 @media (prefers-reduced-motion: reduce) {
   html[data-tront-theme-surface="project"] { scroll-behavior: auto; }
 }
+/* Keep off-screen decorative emoji inside their fixed viewport, not the page width. */
+html[data-tront-theme-surface="project"] #particle-container { overflow: hidden; }
+/* Paper keeps the glow shapes with softer accent light instead of dark halos. */
+html[data-tront-theme-surface="project"][data-te-project="custom"][data-te-mode="light"] .section-header {
+  text-shadow: 0 0 10px color-mix(in srgb, var(--portal-blue) 24%, transparent);
+}
+html[data-tront-theme-surface="project"][data-te-project="custom"][data-te-mode="light"] .hero-title {
+  text-shadow: 0 0 8px color-mix(in srgb, var(--te-secondary) 14%, transparent),
+    0 0 20px color-mix(in srgb, var(--monke-orange) 20%, transparent),
+    0 0 45px color-mix(in srgb, var(--madness-magenta) 14%, transparent);
+}
+html[data-tront-theme-surface="project"][data-te-project="custom"][data-te-mode="light"] .emoji-icon {
+  filter: drop-shadow(0 0 15px color-mix(in srgb, var(--portal-blue) 24%, transparent));
+}
