@@ -1,0 +1,47 @@
+/* MonkePortals keeps its vertical canvas, radial hero, full-bleed videos and rotated slide. */
+html[data-tront-theme-surface="project"][data-te-project="custom"] {
+  --color-bg: var(--te-bg); --color-bg-deep-purple: var(--te-panel);
+  --color-text: var(--te-ink); --monke-orange: var(--te-accent);
+  --portal-blue: var(--te-secondary); --madness-magenta: var(--te-red);
+}
+html[data-tront-theme-surface="project"][data-te-project="custom"] .hero-header {
+  background: radial-gradient(ellipse at 50% 50%, rgba(var(--project-ground-x-rgb), calc(var(--te-glow-opacity) * 5)), transparent 70%);
+}
+html[data-tront-theme-surface="project"][data-te-project="custom"] .hero-title {
+  text-shadow: 0 0 8px var(--te-secondary), 0 0 20px var(--monke-orange), 0 0 45px var(--madness-magenta);
+}
+html[data-tront-theme-surface="project"][data-te-project="custom"] .cta-button,
+html[data-tront-theme-surface="project"][data-te-project="custom"] .cta-button:is(:hover, :focus) { background: var(--te-button); color: var(--te-ink); }
+html[data-tront-theme-surface="project"][data-te-project="custom"] .section-description,
+html[data-tront-theme-surface="project"][data-te-project="custom"] footer { color: var(--te-muted); }
+html[data-tront-theme-surface="project"][data-te-project="custom"] .video-grid-container { background-color: var(--te-bg); }
+html[data-tront-theme-surface="project"][data-te-project="custom"] .video-container { border-color: var(--te-line); }
+html[data-tront-theme-surface="project"][data-te-project="custom"] .features-list li,
+html[data-tront-theme-surface="project"][data-te-project="custom"] .slide-image-container { background-color: var(--te-panel-fill); }
+html[data-tront-theme-surface="project"][data-te-project="custom"] .features-list li:hover { background-color: var(--te-hover); }
+html[data-tront-theme-surface="project"][data-te-project="custom"] .privacy-policy { background-color: var(--te-panel-fill); color: var(--te-muted); border-color: var(--te-line); }
+html[data-tront-theme-surface="project"][data-te-project="custom"] :is(a, .features-list li) { transition-property: transform, box-shadow; }
+@media (prefers-reduced-motion: reduce) {
+  html[data-tront-theme-surface="project"] { scroll-behavior: auto; }
+}
+/* Keep off-screen decorative emoji inside their fixed viewport, not the page width. */
+html[data-tront-theme-surface="project"] #particle-container { overflow: hidden; }
+/* Let both title emojis fit on narrow phones without changing the larger layout. */
+@media (max-width: 360px) {
+  html[data-tront-theme-surface="project"] .hero-title {
+    font-size: clamp(3rem, 16vw, 3.5rem);
+    gap: .75rem;
+  }
+}
+/* Paper keeps the glow shapes with softer accent light instead of dark halos. */
+html[data-tront-theme-surface="project"][data-te-project="custom"][data-te-mode="light"] .section-header {
+  text-shadow: 0 0 10px color-mix(in srgb, var(--portal-blue) 24%, transparent);
+}
+html[data-tront-theme-surface="project"][data-te-project="custom"][data-te-mode="light"] .hero-title {
+  text-shadow: 0 0 8px color-mix(in srgb, var(--te-secondary) 14%, transparent),
+    0 0 20px color-mix(in srgb, var(--monke-orange) 20%, transparent),
+    0 0 45px color-mix(in srgb, var(--madness-magenta) 14%, transparent);
+}
+html[data-tront-theme-surface="project"][data-te-project="custom"][data-te-mode="light"] .emoji-icon {
+  filter: drop-shadow(0 0 15px color-mix(in srgb, var(--portal-blue) 24%, transparent));
+}
